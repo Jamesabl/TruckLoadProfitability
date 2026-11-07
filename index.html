@@ -141,6 +141,23 @@
     </section>
 
     <section class="panel">
+      <h2>Trip cost breakdown</h2>
+      <div class="results">
+        <div class="result primary"><div class="name">Estimated load profitability</div><div class="value" id="profit">—</div></div>
+        <div class="result primary"><div class="name">Profitability percentage</div><div class="value" id="profitPct">—</div></div>
+        <div class="result"><div class="name">Gallons of diesel needed</div><div class="value" id="gallons">—</div></div>
+        <div class="result"><div class="name">Fuel cost for trip</div><div class="value" id="fuelCost">—</div></div>
+        <div class="result"><div class="name">Fuel cost per mile</div><div class="value" id="fuelRate">—</div></div>
+        <div class="result"><div class="name">Total operating cost per mile (before tax estimate)</div><div class="value" id="baseRate">—</div></div>
+        <div class="result"><div class="name">Estimated cost per mile (including 15% tax gross-up)</div><div class="value" id="finalRate">—</div></div>
+        <div class="result"><div class="name">Total load costs</div><div class="value" id="totalCosts">—</div></div>
+
+      </div>
+      <div class="actions"><button id="reset" type="button">Reset calculator</button></div>
+      <p class="note">Tax estimate is a simplified gross-up of 15%</p>
+    </section>
+
+    <section class="panel">
       <h2>Truck operating history</h2>
       <div class="history-list">
         <div class="history-row">
@@ -172,21 +189,7 @@
       <p class="note">The historical cost-per-mile figures use last year's total miles. Update these defaults with your actual annual costs and mileage.</p>
     </section>
 
-    <section class="panel">
-      <h2>Trip cost breakdown</h2>
-      <div class="results">
-        <div class="result"><div class="name">Gallons of diesel needed</div><div class="value" id="gallons">—</div></div>
-        <div class="result"><div class="name">Fuel cost for trip</div><div class="value" id="fuelCost">—</div></div>
-        <div class="result"><div class="name">Fuel cost per mile</div><div class="value" id="fuelRate">—</div></div>
-        <div class="result"><div class="name">Total operating cost per mile (before tax estimate)</div><div class="value" id="baseRate">—</div></div>
-        <div class="result"><div class="name">Estimated cost per mile (including 15% tax gross-up)</div><div class="value" id="finalRate">—</div></div>
-        <div class="result"><div class="name">Total load costs</div><div class="value" id="totalCosts">—</div></div>
-        <div class="result primary"><div class="name">Estimated load profitability</div><div class="value" id="profit">—</div></div>
-        <div class="result primary"><div class="name">Profitability percentage</div><div class="value" id="profitPct">—</div></div>
-      </div>
-      <div class="actions"><button id="reset" type="button">Reset calculator</button></div>
-      <p class="note">Tax estimate follows your requested formula: operating cost per mile ÷ 0.85. This is a simplified gross-up, not a tax calculation or tax advice. It does not include other costs unless you add them to the annual expense inputs.</p>
-    </section>
+    
   </main>
 
   <script>
