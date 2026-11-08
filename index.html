@@ -127,15 +127,15 @@
       <div class="grid">
         <div class="field">
           <label for="loadOffer">Load Offer ($)</label>
-          <input id="loadOffer" type="number" min="0" step="0.01" placeholder="Enter load offer">
+          <input id="loadOffer" type="number" min="0" step="50" placeholder="Enter load offer">
         </div>
         <div class="field">
           <label for="dieselCost">Diesel Cost ($/gallon)</label>
-          <input id="dieselCost" type="number" min="0" step="0.001" placeholder="Enter diesel price">
+          <input id="dieselCost" type="number" min="0" step="0.10" placeholder="Enter diesel price">
         </div>
         <div class="field">
           <label for="miles">Trip Miles</label>
-          <input id="miles" type="number" min="0" step="0.1" placeholder="Enter trip miles">
+          <input id="miles" type="number" min="0" step="10" placeholder="Enter trip miles">
         </div>
       </div>
     </section>
@@ -167,22 +167,22 @@
         </div>
         <div class="history-row">
           <label for="maintenance">Last Year Maintenance ($)</label>
-          <div><input id="maintenance" type="number" min="0" step="0.01" value="0"></div>
+          <div><input id="maintenance" type="number" min="0" step="100" value="15000"></div>
           <div class="rate-wrap"><div class="rate-title">Maintenance cost per mile</div><div class="rate"><span>Maintenance ÷ total miles</span><strong id="maintenanceRate">—</strong></div></div>
         </div>
         <div class="history-row">
           <label for="insurance">Last Year Insurance ($)</label>
-          <div><input id="insurance" type="number" min="0" step="0.01" value="0"></div>
+          <div><input id="insurance" type="number" min="0" step="100" value="3600"></div>
           <div class="rate-wrap"><div class="rate-title">Insurance cost per mile</div><div class="rate"><span>Insurance ÷ total miles</span><strong id="insuranceRate">—</strong></div></div>
         </div>
         <div class="history-row">
           <label for="registration">Last Year Registration / Fees ($)</label>
-          <div><input id="registration" type="number" min="0" step="0.01" value="0"></div>
+          <div><input id="registration" type="number" min="0" step="100" value="2500"></div>
           <div class="rate-wrap"><div class="rate-title">Registration / fees cost per mile</div><div class="rate"><span>Fees ÷ total miles</span><strong id="registrationRate">—</strong></div></div>
         </div>
         <div class="history-row">
           <label for="annualMiles">Last Year Total Miles Driven</label>
-          <div><input id="annualMiles" type="number" min="0" step="1" value="0"></div>
+          <div><input id="annualMiles" type="number" min="0" step="1000" value="70000"></div>
           <div class="rate-wrap"><div class="rate-title">Annual mileage used for allocations</div><div class="rate"><span>Total miles driven</span><strong id="annualMilesDisplay">0 mi</strong></div></div>
         </div>
       </div>
@@ -261,10 +261,10 @@
       $("dieselCost").value = "";
       $("miles").value = "";
       $("truckMileage").value = "6.5";
-      $("maintenance").value = "0";
-      $("insurance").value = "0";
-      $("registration").value = "0";
-      $("annualMiles").value = "0";
+      $("maintenance").value = "15000";
+      $("insurance").value = "3600";
+      $("registration").value = "2500";
+      $("annualMiles").value = "70000";
       calculate();
     });
     calculate();
