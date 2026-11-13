@@ -427,25 +427,6 @@
       const breakEvenOffer = Number.isFinite(totalCosts) && companyMultiplier > 0
         ? totalCosts / companyMultiplier : NaN;
 
-      // Estimate total trip hours
-      // Assumes 700 miles can be driven in 11 hours.
-      // A 10-hour rest is required between driving segments.
-
-      const restBreaks = miles > 0
-        ? Math.floor((miles - 1) / 700) : 0;
-
-      const drivingHours = miles > 0
-        ? (miles / 700) * 11 : NaN;
-
-      const totalTripHours = Number.isFinite(drivingHours)
-        ? drivingHours + (restBreaks * 10) : NaN;
-
-      // Estimated profit per elapsed trip hour
-      const hourlyProfit = Number.isFinite(profit) && totalTripHours > 0
-        ? profit / totalTripHours : NaN;
-
-
-
       // Display historical operating rates
       set("maintenanceRate", perMile(maintenanceRate));
       set("insuranceRate", perMile(insuranceRate));
@@ -482,8 +463,6 @@
 
       set("breakEven", money(breakEvenOffer));
 
-      set("hourlyProfit", Number.isFinite(hourlyProfit)
-        ? money(hourlyProfit) + "/hr" : "—");
 
       // Display profitability
       const profitEl = $("profit");
