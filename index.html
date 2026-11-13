@@ -193,11 +193,6 @@
         </div>
 
         <div class="result">
-          <div class="name">Estimated Hourly Profit</div>
-          <div class="value" id="hourlyProfit">—</div>
-        </div>
-
-        <div class="result">
           <div class="name">Original load offer</div>
           <div class="value" id="originalOffer">—</div>
         </div>
@@ -378,7 +373,7 @@
       const annualMiles = number("annualMiles");
 
       // Parent company deduction
-      const companyPct = 30;
+      const companyPct = 20;
       const companyAmount = offer * (companyPct / 100);
       const adjustedOffer = offer - companyAmount;
 
